@@ -47,12 +47,8 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
-        test: /\.s[ac]ss$/i, // Обрабатывает как .sass, так и .scss файлы
-        use: [
-          MiniCssExtractPlugin.loader, // Извлекает CSS в отдельный файл
-          "css-loader", // Переводит CSS в CommonJS
-          "sass-loader", // Компилирует SCSS в CSS
-        ],
+        test: /\.s[ac]ss$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
     ],
   },
